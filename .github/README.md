@@ -41,9 +41,7 @@
 
 ## Refs
 
-<!--
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)shell-p-command](https://github.com/n138-kz/shell-p-command/)
--->
 
 ## License
 
