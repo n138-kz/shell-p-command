@@ -1,0 +1,32 @@
+name: Check Python
+
+on:
+    workflow_dispatch:
+    push:
+        paths: 
+            - '**.py'
+    pull_request:
+        paths: 
+            - '**.py'
+    
+permissions:
+    contents: read
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v3
+            - name: github.head_ref
+              run: echo '::notice title=[${{ github.job }}] Head Branch Name::${{ github.head_ref }}'
+            - name: github.base_ref
+              run: echo '::notice title=[${{ github.job }}] Base Branch Name::${{ github.base_ref }}'
+            - name: Set up Python 3.13
+              uses: actions/setup-python@v3
+              with:
+                python-version: 3.13
+            - name: Install dependencies pip
+              run: python -m pip install --upgrade pip
+            - name: Install dependencies requirements.txt
+              run: for i in $(find -name 'requirements.txt'); do pip install -r $(dirname ${i})/requirements.txt; done
