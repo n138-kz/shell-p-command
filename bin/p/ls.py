@@ -18,6 +18,16 @@ def get_type(path:str='.'):
     else:
         return 'unknown'
 
+def get_size(path:str='.'):
+    total = 0
+    with os.scandir(path) as it:
+        for entry in it:
+            if entry.is_file():
+                total += entry.stat().st_size
+            elif entry.is_dir():
+                total += get_size(entry.path)
+    return total
+
 def list(path:str='.'):
     result = os.listdir(path)
     result = sorted(result)
@@ -25,5 +35,6 @@ def list(path:str='.'):
         result[i] = {
             'name': result[i],
             'type': get_type(result[i]),
+            'size': get_size(result[i]),
         }
     return result
