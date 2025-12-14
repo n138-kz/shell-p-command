@@ -5,5 +5,5 @@ if len(sys.argv) == 0:
 
 if False:
     pass
-elif sys.argv == 'ls':
+elif sys.argv[1] == 'ls':
     from p import ls
