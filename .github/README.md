@@ -1,6 +1,6 @@
 # [shell-p-command](https://github.com/n138-kz/shell-p-command)
 
-[![GitHub Extra Pins](https://github-readme-stats.vercel.app/api/pin/?locale=ja&show_owner=true&theme=graywhite&username=n138-kz&repo=shell-p-command)](https://github.com/n138-kz/shell-p-command)
+[![GitHub Extra Pins](https://images-ext-1.discordapp.net/external/TuPI8GPke2rzNzWQByE2Yz5uUK1ILPmMqce6RCZx750/https/opengraph.githubassets.com/6042216d875abffda37b8b22865666bc09174b3dc7da241e2e1ee0c4c6a0ac1d/n138-kz/shell-p-command?format=webp)](https://github.com/n138-kz/shell-p-command)
 
 ## Quick setup
 
